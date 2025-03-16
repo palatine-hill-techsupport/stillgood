@@ -1,0 +1,441 @@
+/* ==========================
+   1. General Styles
+   ========================== */
+   * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    display: flex;
+    justify-content: center;
+    background-color: #FCBBD3;
+}
+
+/* ==========================
+   2. Layout Structure
+   ========================== */
+.container {
+    display: flex;
+    width: 90%;
+    max-width: 1920px;
+    min-height: 100vh;
+}
+
+/* ==========================
+   3. Sidebar & Navigation (Left Panel)
+   ========================== */
+.sidebar {
+    width: 27%;
+    max-width: 500px;
+    margin-right: 50px;
+    height: 100vh;
+    position: sticky;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.logo {
+    margin-top: 50px;
+}
+
+.logo img {
+    width: 100%; 
+    display: block;
+}
+
+.address-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; 
+    height: auto; 
+    margin-top: 30px;
+}
+
+.address-container img {
+    width: 100%; 
+    max-width: unset;
+    display: block;
+}
+
+/* Address Box Link */
+.address-link {
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+/* Default Address Image */
+.address-img {
+    width: 100%;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Hover Effect - Swap to Hover Image */
+.address-link:hover .address-img {
+    content: url("images/address-box-hover.png");
+}
+
+/* ==========================
+   4. Social Media Links
+   ========================== */
+.socials {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.socials-wrapper {
+    background-image: url("images/socials-base.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Social Icons */
+.social-icon {
+    height: 35px;
+    width: 35px;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Hover Effect - Change Icon on Hover */
+.ig:hover {
+    content: url("images/socials-ig-hover.png");
+}
+
+.fb:hover {
+    content: url("images/socials-fb-hover.png");
+}
+
+/* ==========================
+   5. Footer
+   ========================== */
+   .denby-design {
+    margin-top: auto; 
+    text-align: center;
+    font-family: "Inter", sans-serif;
+    font-weight: 800; 
+    font-size: 14px;
+    padding: 20px;
+}
+
+.denby-design a {
+    text-decoration: none;
+    color: black;
+    font-weight: 900;
+}
+
+.denby-design a:hover {
+    color: #B3A2FF;
+}
+
+/* ==========================
+   6. Main Content & Features (Right Panel)
+   ========================== */
+.main-content {
+    display: flex;
+    flex-direction: column;
+    width: 73%;
+}
+
+/* Just In Feature (Horizontal Scroll) */
+.just-in {
+    height: 66.4vh;
+    overflow-x: auto;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    background: white;
+    margin: 50px 0px 50px 0px;
+}
+
+.slider-container {
+    width: 100%;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+.slider {
+    display: flex;
+    flex-wrap: nowrap;
+    scroll-snap-type: x mandatory;
+    overflow-x: auto;
+}
+
+.slide {
+    min-width: 451px;
+    height: 725px;
+    background: #ddd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    scroll-snap-align: start;
+    padding: 20px;
+    box-sizing: border-box;
+    margin-right: 25px;
+}
+
+/* Ensure images inside slides fit properly */
+.slide img {
+    max-width: 80%;
+    max-height: 80%;
+    object-fit: contain;
+}
+
+.fixed-slide {
+    position: sticky;
+    left: 0;
+    z-index: 10;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.fixed-slide img {
+    object-fit: contain;
+    transform: scale(0.8);
+}
+
+/* ==========================
+   7. Product Grid (Vertical Scroll)
+   ========================== */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    overflow: hidden;
+    height: auto;
+    max-height: 50vh;
+    background: white;
+    padding-left: 10px;
+}
+
+.product {
+    background: #ddd;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 10px 0px 0px;
+}
+
+/* ==========================
+   8. Interactive Elements
+   ========================== */
+.spin-btn {
+    transition: opacity 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.spin-btn:hover {
+    content: url("images/spin-the-rack-hover.png");
+}
+
+.checkout-btn {
+    display: block; 
+    margin: 0 auto;
+    transition: opacity 0.3s ease-in-out;
+    margin-bottom: 75px;
+}
+
+.checkout-btn:hover {
+    content: url("images/checkout-hover.png");
+}
+
+/* Add to Basket Label */
+.add-to-basket-label {
+    color: #FF4B32;
+    font-size: 18px;
+    font-weight: bold;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+.add-to-basket-label:hover {
+    color: black;
+}
+
+/* Shopping Bag Button */
+.shopping-bag-btn {
+    width: 50px;
+    height: auto;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Hover Effect - Swap to Hover Image */
+.shopping-bag-btn:hover {
+    content: url("images/shopping-bag-hover.png");
+}
+
+/* ==========================
+   9. Popups
+   ========================== */
+/* Combo Timer Popup */
+.combo-popup {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+/* Show the popup */
+.combo-popup.visible {
+    opacity: 1;
+    transform: translateY(0);
+    display: flex;
+}
+
+/* Combo Image */
+.combo-img {
+    width: 40px;
+    height: auto;
+}
+
+/* Combo Text */
+.combo-text {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* Hide Popup by Default */
+.hidden {
+    display: none !important;
+}
+
+/* Item Details Popup */
+.item-popup {
+    position: fixed;
+    top: 50px;
+    left: 50px;
+    right: 50px;
+    bottom: 50px;
+    background: rgba(0, 0, 0, 0.85);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    display: none; 
+    z-index: 1000;
+    overflow-y: auto;
+}
+
+/* Show Popup */
+.item-popup.visible {
+    display: block !important;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Popup Content */
+.popup-content {
+    max-width: 90%;
+    max-height: 90%;
+    margin: auto;
+    text-align: center;
+}
+
+/* Close Button */
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* ==========================
+   8. Responsive Design Adjustments
+   ========================== */
+   @media (max-width: 1200px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .sidebar {
+        width: 100%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+        margin-right: 0;
+        position: relative;
+        z-index: 1; /* Ensures main content is above sidebar */
+    }
+
+    .socials {
+        justify-content: center;
+    }
+
+    .denby-design {
+        width: 100%;
+        text-align: center;
+    }
+
+    .main-content {
+        width: 95%; 
+        position: relative;
+        z-index: 2; /* Keeps main content above sidebar */
+    }
+
+    .just-in {
+        height: auto;
+        min-height: 400px;
+        max-height: none;
+    }
+
+    .slider-container {
+        height: auto;
+        max-height: none;
+    }
+
+    .slide {
+        min-width: 343px;
+        width: 100%;
+        max-width: 343px;
+        height: auto;
+        padding: 15px;
+        margin-right: 15px;
+        box-sizing: border-box;
+    }
+
+    .fixed-slide {
+        width: 343px;
+        min-width: 343px;
+        max-width: 343px;
+        height: auto;
+        position: static;
+    }
+
+    .slider {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        width: 100%;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+   }

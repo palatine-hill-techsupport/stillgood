@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "name": "Vintage Leather Jacket",
+        "price": 75.99,
+        "condition": "Like New",
+        "quantity": 1,
+        "description": "Classic black leather jacket with silver zippers, timeless style.",
+        "views": 10,
+        "dateAdded": "2024-03-01"
+    },
+    {
+        "id": 2,
+        "name": "90s Graphic Tee",
+        "price": 19.99,
+        "condition": "Good",
+        "quantity": 2,
+        "description": "Authentic 90s band t-shirt, slightly faded for that vintage feel.",
+        "views": 5,
+        "dateAdded": "2024-03-10"
+    },
+    {
+        "id": 3,
+        "name": "Denim Overalls",
+        "price": 45.00,
+        "condition": "Very Good",
+        "quantity": 1,
+        "description": "Classic blue denim overalls with adjustable straps and pocket details.",
+        "views": 8,
+        "dateAdded": "2024-03-12"
+    }
+]
